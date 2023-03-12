@@ -47,7 +47,7 @@ public class OrderRepository {
     }
 
     public Integer getOrderCountByPartnerId(String partnerId) {
-        return partnerOrdersList.get(partnerId).size();
+        return delivery.get(partnerId).getNumberOfOrders();
     }
 
     public List<String> getOrdersByPartnerId(String partnerId) {
@@ -95,7 +95,9 @@ public class OrderRepository {
 
         for (String order: orders) {
             ordnpartner.remove(order);
+            //ord.remove(order);
         }
+
     }
 
     public void deleteOrderById(String orderId) {

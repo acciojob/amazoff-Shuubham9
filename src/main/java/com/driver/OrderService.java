@@ -55,7 +55,7 @@ public class OrderService {
         String [] str = deliveryTime.split(":");
         int a = Integer.parseInt(str[0]);
         int b= Integer.parseInt(str[1]);
-        int c= a+b;
+        int c= (a*60)+b;
         return OrdRepo.getOrdersLeftAfterGivenTimeByPartnerId(c,partnerId);
     }
 
